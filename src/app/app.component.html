@@ -17,18 +17,18 @@
 
     <div class="filter">
       <label for="brands">Brands</label>
-      <select  id="brands">
-        <option   *ngFor="let brand of productBrands$ | async" [value]="brand">{{brand}}</option>
+      <select id="brands" (change)="onChangeBrand($event)">
+        <option *ngFor="let brand of productBrands$ | async" [value]="brand">{{brand}}</option>
       </select>
     </div>
 
     <div class="filter">
-      <label for="in-stock">All</label>
-      <input type="radio" id="in-stock" name="stock" value="all" checked>
+      <label for="all">All</label>
+      <input type="radio" (change)="onChangeRadio($event)" id="all" name="stock" value="all" checked>
       <label for="in-stock">In stock</label>
-      <input type="radio" id="in-stock" name="stock" value="in-stock">
+      <input type="radio" (change)="onChangeRadio($event)" id="in-stock" name="stock" value="in-stock">
       <label for="out-of-stock">Out of stock</label>
-      <input type="radio" id="out-of-stock" name="stock" value="out-of-stock">
+      <input type="radio" (change)="onChangeRadio($event)" id="out-of-stock" name="stock" value="out-of-stock">
     </div>
   </div>
   <div class="container">
