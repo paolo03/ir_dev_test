@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { of, combineLatest} from "rxjs";
-import { map } from "rxjs/operators";
+import { last, map } from "rxjs/operators";
 
 @Injectable({
   providedIn: 'root'
@@ -75,8 +75,7 @@ export class ProductsService {
       getProduct,
       getQuantity]
     )
-      .pipe(map(result => {
-        console.log(result)
+      .pipe(last(), map(result => {
         return { name: result[0], quantity: result[1] }
       }));
 
