@@ -1,4 +1,6 @@
 import { Component } from "@angular/core";
+import { Observable } from "rxjs";
+import { ProductsService } from "./products/products.service";
 
 @Component({
   selector: "app-root",
@@ -7,4 +9,9 @@ import { Component } from "@angular/core";
 })
 export class AppComponent {
   title = "ir-dev-test";
+  product$: Observable<any[]>
+
+  constructor(private productService: ProductsService) {
+    this.product$ = this.productService.getProducts()
+  }
 }
