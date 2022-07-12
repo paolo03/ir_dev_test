@@ -10,13 +10,13 @@
    
     <form [formGroup]="searchForm">
     <div class="filter">
-      <label for="search" >Search</label>
-      <input id="search" formControlName="search"/>
+      <label for="search"><b>Search</b> </label>
+      <input id="search" type="text" formControlName="search"/>
     </div>
   </form>
 
     <div class="filter">
-      <label for="brands">Brands</label>
+      <label for="brands"><b>Brands</b></label>
       <select id="brands" (change)="onChangeBrand($event)">
         <option *ngFor="let brand of productBrands$ | async" [value]="brand">{{brand}}</option>
       </select>

@@ -1,6 +1,6 @@
 
 
-<table id="leaderboard" class="tableCenter">
+<table *ngIf="products.length" id="productTable" class="tableCenter">
   <tr>
     <th>Id</th>
     <th>Name</th>
@@ -15,7 +15,13 @@
     <td>{{product.name}}</td>
     <td>{{product.brand}}</td>
     <td>{{product.price}}</td>
-    <td>{{product.quantity}}</td>
+    <td style="text-align: center;">{{product.quantity}}</td>
     <td>{{product.description}}</td>
   </tr>
+
 </table>
+
+
+<div *ngIf="!products.length" style="text-align: center;">
+  <h4>no product found</h4>
+</div>

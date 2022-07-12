@@ -1,0 +1,42 @@
+.tableCenter {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+
+
+  table{
+    border-collapse: collapse;
+    color: #4B5C68; 
+    font-size: 14px;
+    overflow-y: auto;  
+    overflow-x: hidden;
+    margin-bottom: 60px;
+  }
+
+
+  #productTable tr:nth-child(odd){
+    background-color: #F6F7F7;
+}
+
+h4 {
+    text-transform: uppercase;
+    color: red;
+}
+
+table td{
+    border-bottom: 1px solid #E4EDF2;
+    height: 70px;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  table th{
+    border-bottom: 1px solid #E4EDF2;
+    text-align: left;
+    font-size: 12px;
+    padding-left: 20px;
+    height: 40px;
+    background-color: #E4EDF2;
+  }
