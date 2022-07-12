@@ -76,6 +76,7 @@ export class ProductsService {
       getQuantity]
     )
       .pipe(map(result => {
+        console.log(result)
         return { name: result[0], quantity: result[1] }
       }));
 

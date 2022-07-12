@@ -1,6 +1,5 @@
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
-
 import { ProductsGridComponent } from "./products-grid.component";
 
 @NgModule({
@@ -8,7 +7,7 @@ import { ProductsGridComponent } from "./products-grid.component";
     CommonModule,
   ],
   declarations: [
-    ProductsGridComponent
+    ProductsGridComponent,
   ],
   exports: [
     ProductsGridComponent
