@@ -10,7 +10,7 @@
     <th>Description</th>
   </tr>
 
-  <tr *ngFor="let product of products">
+  <tr *ngFor="let product of products; trackBy: myTrackingFn">
     <td>{{product.id}}</td>
     <td>{{product.name}}</td>
     <td>{{product.brand}}</td>
